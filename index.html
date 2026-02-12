@@ -6,7 +6,7 @@
 
 <title>HS Rens & Vedlikehold | Ventilasjonsrens</title>
 
-<meta name="description" content="Ventilasjonsrens med premium utførelse til konkurransedyktige priser. Få renere luft og bedre inneklima. Ring 920 98 742.">
+<meta name="description" content="Premium ventilasjonsrens til konkurransedyktige priser. Få renere luft og bedre inneklima. Kontakt oss i dag.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
@@ -20,40 +20,46 @@ box-sizing:border-box;
 
 body{
 font-family:'Inter',sans-serif;
-background:#0a0f1c;
+background:#070c18;
 color:white;
+}
+
+.container{
+max-width:1150px;
+margin:auto;
+padding:0 20px;
 }
 
 /* HERO */
 
 .hero{
-min-height:90vh;
+min-height:92vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:60px 20px;
-background: radial-gradient(circle at 20% 20%, #16213e, #0a0f1c);
+background:
+radial-gradient(circle at 20% 20%, #16213e, #070c18);
 }
 
 .hero h1{
-font-size:56px;
+font-size:64px;
+line-height:1.05;
 max-width:900px;
-line-height:1.1;
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:20px;
-color:#b8c5e4;
+font-size:22px;
+color:#a9b4d0;
 max-width:650px;
 margin:auto;
 }
 
 .cta{
 display:inline-block;
-margin-top:35px;
-padding:18px 34px;
+margin-top:40px;
+padding:18px 38px;
 background:#4ea1ff;
 border-radius:14px;
 font-weight:700;
@@ -64,119 +70,155 @@ transition:.25s;
 }
 
 .cta:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(78,161,255,.35);
+transform:translateY(-4px);
+box-shadow:0 15px 35px rgba(78,161,255,.35);
 }
 
-/* TRUST BAR */
+/* TRUST */
 
 .trust{
 display:flex;
 justify-content:center;
-gap:40px;
+gap:50px;
 flex-wrap:wrap;
-padding:35px;
-background:#0f1629;
+padding:40px;
+background:#0d1426;
+color:#8fa2d6;
 font-weight:600;
-color:#9fb0da;
 }
 
 /* SECTIONS */
 
 .section{
-padding:90px 20px;
-max-width:1100px;
-margin:auto;
+padding:110px 0;
 }
 
 .section h2{
-font-size:36px;
-margin-bottom:40px;
 text-align:center;
+font-size:42px;
+margin-bottom:60px;
 }
 
 /* CARDS */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
 }
 
 .card{
-background:#121a30;
-padding:30px;
-border-radius:18px;
+background:#0f172d;
+padding:35px;
+border-radius:20px;
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-8px);
 }
 
-.card h3{
-margin-bottom:10px;
-}
-
-/* PRICE */
-
-.price-box{
-margin-top:15px;
-background:#182445;
-padding:20px;
-border-radius:14px;
-font-size:28px;
-font-weight:800;
+.price{
+font-size:34px;
 color:#69b3ff;
+font-weight:800;
+margin:10px 0;
 }
 
-/* CONTACT */
+/* CONTACT FORM */
 
-.contact{
-text-align:center;
+.contact-wrap{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+form{
+background:#0f172d;
+padding:40px;
+border-radius:20px;
+}
+
+input, textarea{
+width:100%;
+padding:16px;
+margin-top:10px;
+margin-bottom:20px;
+border-radius:12px;
+border:none;
+background:#121c38;
+color:white;
+font-size:16px;
+}
+
+textarea{
+min-height:140px;
+resize:vertical;
+}
+
+button{
+width:100%;
+padding:18px;
+border:none;
+border-radius:14px;
+background:#4ea1ff;
+color:white;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+transition:.2s;
+}
+
+button:hover{
+background:#6ab4ff;
+}
+
+.contact-info h3{
+font-size:30px;
+margin-bottom:15px;
 }
 
 .phone{
-font-size:42px;
+font-size:36px;
 font-weight:800;
-margin:20px 0;
+margin:15px 0;
 }
 
-.email-btn{
-display:inline-block;
-margin-top:10px;
-padding:14px 26px;
-border-radius:12px;
-background:#4ea1ff;
-color:white;
-text-decoration:none;
-font-weight:600;
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:42px;
 }
 
-/* MOBILE CALL BUTTON */
+.contact-wrap{
+grid-template-columns:1fr;
+}
 
-.call-now{
+}
+
+/* STICKY CALL */
+
+.call{
 position:fixed;
 bottom:20px;
 left:20px;
 right:20px;
 background:#4ea1ff;
-color:white;
 text-align:center;
 padding:16px;
 border-radius:14px;
 font-weight:800;
-font-size:20px;
 text-decoration:none;
-box-shadow:0 10px 30px rgba(0,0,0,.4);
+color:white;
+font-size:20px;
 display:none;
 }
 
 @media(max-width:768px){
-.hero h1{
-font-size:38px;
-}
-.call-now{
+.call{
 display:block;
 }
 }
@@ -184,7 +226,7 @@ display:block;
 footer{
 text-align:center;
 padding:40px;
-color:#7f8bb0;
+color:#6c7aa6;
 }
 
 </style>
@@ -193,85 +235,108 @@ color:#7f8bb0;
 <body>
 
 <section class="hero">
+<div class="container">
 
-<div>
-<h1>Ventilasjonsrens med premium resultat — uten premium pris</h1>
+<h1>Ventilasjonsrens med premium resultat</h1>
 
 <p>
 Få renere luft, mindre støv og et sunnere inneklima.
-Vi leverer arbeid vi er stolte av, og er ofte blant de rimeligste i markedet.
+Vi leverer grundig arbeid – og er ofte blant de mest konkurransedyktige på pris.
 </p>
 
 <a class="cta" href="tel:92098742">
 📞 Ring 920 98 742
 </a>
+
 </div>
-
 </section>
-
 
 <div class="trust">
 <span>✔ Premium utførelse</span>
-<span>✔ Konkurransedyktige priser</span>
 <span>✔ Synlige resultater</span>
+<span>✔ Konkurransedyktige priser</span>
 <span>✔ Rask respons</span>
 </div>
 
 
-<section class="section">
+<section class="section container">
 
-<h2>Våre tjenester</h2>
+<h2>Tjenester</h2>
 
 <div class="grid">
 
 <div class="card">
 <h3>Ventilasjonsrens</h3>
 <p>
-Grundig rens av ventilasjon gir bedre luftkvalitet,
-mindre støv og et sunnere hjem.
+Grundig rens av ventilasjon forbedrer luftkvaliteten,
+reduserer støv og gir et sunnere hjem.
 </p>
 </div>
 
 <div class="card">
 <h3>Varmepumperens</h3>
-
-<div class="price-box">
-Fast pris: 1399,-
-</div>
-
-<p style="margin-top:10px;">
-Perfekt tillegg når vi først er hos deg.
-</p>
-
+<div class="price">Fast pris 1399,-</div>
+<p>Perfekt tillegg når vi først er hos deg.</p>
 </div>
 
 <div class="card">
 <h3>Hvorfor rense?</h3>
 <p>
-Over tid samler ventilasjon store mengder støv.
-Et rent anlegg gir bedre inneklima og økt komfort.
+Over tid samler ventilasjon store mengder partikler.
+Et rent system gir bedre komfort og inneklima.
 </p>
 </div>
 
 </div>
-
 </section>
 
 
-<section class="section contact">
 
-<h2>Bestill ventilasjonsrens</h2>
+<section class="section container">
+
+<h2>Kontakt oss</h2>
+
+<div class="contact-wrap">
+
+<div class="contact-info">
+
+<h3>Bestill eller få tilbud</h3>
 
 <div class="phone">
 📞 920 98 742
 </div>
 
-<p>Eller send oss en e-post:</p>
+<p>
+Eller fyll ut skjemaet — vi svarer raskt.
+</p>
 
-<a class="email-btn" href="mailto:post@hsrens.no">
+</div>
+
+
+<form action="https://formsubmit.co/post@hsrens.no" method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="Ny henvendelse fra nettsiden!">
+
+<label>Navn</label>
+<input type="text" name="name" required>
+
+<label>Telefon</label>
+<input type="text" name="phone" required>
+
+<label>Adresse</label>
+<input type="text" name="address">
+
+<label>Melding</label>
+<textarea name="message" required></textarea>
+
+<button type="submit">
 Send forespørsel
-</a>
+</button>
 
+</form>
+
+</div>
 </section>
 
 
@@ -279,8 +344,7 @@ Send forespørsel
 © HS Rens & Vedlikehold
 </footer>
 
-
-<a class="call-now" href="tel:92098742">
+<a class="call" href="tel:92098742">
 📞 Ring nå
 </a>
 
